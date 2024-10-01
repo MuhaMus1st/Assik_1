@@ -1,9 +1,8 @@
-// Step 1: Create a Product interface
+
 interface Product {
     double getDiscount();
 }
 
-// Step 2: Implement the Product interface in different product classes
 class FoodProduct implements Product {
     public double price;
 
@@ -30,14 +29,13 @@ class ElectronicsProduct implements Product {
     }
 }
 
-// Step 3: Modify the DiscountCalculator to work with Product interface
 class DiscountCalculator {
     public double calculateDiscount(Product product) {
         return product.getDiscount();
     }
 }
 
-// Step 4: Add a new product type (e.g., ClothingProduct) without modifying DiscountCalculator
+
 class ClothingProduct implements Product {
     public double price;
 
@@ -51,7 +49,7 @@ class ClothingProduct implements Product {
     }
 }
 
-// Test the refactored code
+
 public class Main {
     public static void main(String[] args) {
         DiscountCalculator calculator = new DiscountCalculator();
